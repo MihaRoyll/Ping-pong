@@ -61,8 +61,8 @@ while run:
             run = False
         elif e.type == MOUSEBUTTONDOWN and e.button == 1:
             color_selecting = True
-        elif e.type == MOUSEBUTTONDOWN and e.button == 1:
-            color_selecting = True
+        elif e.type == MOUSEBUTTONUP and e.button == 1:
+            color_selecting = False
 
     if not finish:
         if color_selecting:
@@ -84,7 +84,7 @@ while run:
             finish = True
             window.blit(lose1, (200, 200))
         if ball.rect.x > WIDTH:
-            finish = Truea
+            finish = True
             window.blit(lose2, (200, 200))
 
 
